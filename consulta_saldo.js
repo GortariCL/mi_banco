@@ -3,7 +3,7 @@ consultaSaldo = async (client, release, id) => {
     try {
         const cursor = await client.query(new Cursor(`SELECT * FROM cuentas WHERE cuenta = ${id}`));
         cursor.read(10, (err, rows) => {
-            if(err){
+            if (err) {
                 console.log(err);
             }
             console.log(rows);

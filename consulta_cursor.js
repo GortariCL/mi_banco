@@ -4,7 +4,7 @@ consultaCursor = async (client, release, cuenta) => {
     try {
         const cursor = await client.query(new Cursor(`SELECT * FROM transacciones WHERE cuenta = ${cuenta}`));
         cursor.read(10, (err, rows) => {
-            if(err){
+            if (err) {
                 console.log(err);
             }
             console.log(rows);
