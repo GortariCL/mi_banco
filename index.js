@@ -40,7 +40,7 @@ pool.connect(async (error_conexion, client, release) => {
             await consultaSaldo(client, release, argumento[1]);
         }
     }catch(error_consulta){
-        console.log('error_consulta.code');
+        console.log(error_consulta.code);
     }
     pool.end();
 });
